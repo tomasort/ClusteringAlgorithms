@@ -3,20 +3,11 @@
 This program contains implementations of K-Means and K-NN algorithms, and can be used to 
 train and test these models on some arbitrary data (in csv format). 
 
-# Requirements
-
-The requirements for this project are: 
-
-```
-numpy==1.21.4
-pandas==1.3.4
-```
-
 ## How to Run
 
 To run this program, simply use python3 as shown below. 
 ```
-python3 lab4.py -h
+python3 main.py -h
 ```
 
 The option `-h` can be used to get more information about the flags that can be used and 
@@ -38,14 +29,14 @@ Flags that can be used are:
 To run the program on some input using the KNN algorithm, you just need to set the mode to knn, 
 specify a value for k, and pass the training and testing sets as input to the CLI.
 ```
-python3 lab4.py -mode knn -k 3 -train ./training_file -test ./testing_file
+python3 main.py -mode knn -k 3 -train ./training_file -test ./testing_file
 ```
 
 ## Running KMeans
 
 To run the program on some input using the KMeans algorithm, you just need to set the mode to kmeans, pass the dataset as input to the CLI using the `-data` flag and specify any number of centroids.
 ```
-python3 lab4.py -mode kmeans -data ./datafile (0,0) (200,200) (500,500)
+python3 main.py -mode kmeans -data ./datafile 0,0 200,200 500,500
 ```
 
 K-Means requires the initial centroids, this must be passed as command line arguments where each centroid is separated by a space and each coordinate is separated by a comma. 
